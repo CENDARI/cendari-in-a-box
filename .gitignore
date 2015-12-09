@@ -1,0 +1,8 @@
+.vagrant/
+*.swp
+.tmp/
+modules/
+manifests/vagrant.pp
+hieradata/*_private.yaml
+.librarian
+Gemfile.lock

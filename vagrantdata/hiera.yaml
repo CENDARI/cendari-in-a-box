@@ -1,0 +1,13 @@
+---
+:hierarchy:
+    - "%{::fqdn}_private"
+    - "%{::fqdn}_blackbox"
+    - "%{::fqdn}"
+    - "%{::environment}_blackbox"
+    - "%{::environment}"
+    - common
+:backends:
+    - yaml
+:yaml:
+    :datadir: 'hieradata'
+

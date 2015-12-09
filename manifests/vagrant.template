@@ -1,0 +1,9 @@
+# classify the role of the local test machine
+# rename to vagrant.pp to overwrite the cendariinabox role from site.pp
+
+node 'box.cendari.local' {
+  # include '::roles::cendariinabox'
+  # include '::roles::frontoffice'
+  # include '::roles::backoffice'
+}
+
