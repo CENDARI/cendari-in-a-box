@@ -33,7 +33,7 @@ FORGE
 GIT
   remote: https://github.com/CENDARI/puppetmodule-cendari.git
   ref: master
-  sha: 9d8ed31b40d8bcbd48e502ce44bfc8d82574fc93
+  sha: e039aed4b9973fa395b1a263172b62ddec1fd1b6
   specs:
     cendari-cendari (0.0.1)
       puppetlabs-concat (>= 1.1.1)

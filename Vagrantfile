@@ -30,7 +30,7 @@ Vagrant.configure(2) do |config|
       puppet.working_directory = "/vagrant"
     end
     box.vm.provider :virtualbox do |vb|
-      vb.name = "box-cendari-puppet"
+      vb.name = "cendari-in-a-box"
       vb.memory = 2048
       vb.customize ["modifyvm", :id, "--nictype1", "Am79C973"]
       vb.customize ["modifyvm", :id, "--nictype2", "Am79C973"]
