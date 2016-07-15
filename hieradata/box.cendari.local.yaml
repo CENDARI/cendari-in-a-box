@@ -30,7 +30,7 @@ cendari::notes_secret: '12345'
 cendari::notes_adminuser_eppn: 'cendari_notes@localhost.localdomain'
 cendari::notes_adminuser_mail: 'cendari-notes@localhost.localdomain'
 cendari::notes_adminuser_key: 'c14edfe9-4a6f-4e3b-ae9a-cb80f0d1e468'
-cendari::notes_sub_site: '/notes'
+cendari::notes_sub_site: '/notes/'
 
 
 

@@ -14,6 +14,11 @@ class profiles::frontoffice {
     options => {'AddHandler' => 'fcgid-script .fcgi'},
   }
 
+  postgresql::server::db { $::cendari::notes_pgsqldb:
+    user     => $::cendari::notes_pgsqluser,
+    password => postgresql_password($::cendari::notes_pgsqluser, $::cendari::notes_pgsqlpassword),
+  }
+
   concat::fragment{'apache_frontoffice':
     target  => $::profiles::apache::cendarivhost,
     content => '

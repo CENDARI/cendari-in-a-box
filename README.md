@@ -35,6 +35,9 @@ service litef-conductor restart
 
 gunzip -k /vagrant/vagrantdata/atom2.sql.gz
 mysql atom2 < /vagrant/vagrantdata/atom2.sql
+
+cd /var/www/notes
+sudo -u www-data fab sync_database
 ```
 
 ## Use

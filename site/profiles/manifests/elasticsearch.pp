@@ -23,5 +23,8 @@ class profiles::elasticsearch {
     }
   }
 
+  Package['openjdk-7-jre-headless'] -> Elasticsearch::Instance['masternode']
+
+
 }
 

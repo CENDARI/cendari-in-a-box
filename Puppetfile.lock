@@ -40,7 +40,7 @@ FORGE
 GIT
   remote: https://github.com/CENDARI/puppetmodule-cendari.git
   ref: master
-  sha: 473707032b56e850d0209cb758e6489dff5e6b60
+  sha: da0762be698373b27eba3ee03f331905a3aef0f6
   specs:
     cendari-cendari (0.0.1)
       nanliu-staging (>= 1.0.0)
