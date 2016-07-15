@@ -11,7 +11,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.define "box" do |box|
     box.vm.box = "dariah-trusty64"
-    box.vm.box_url = "http://ci.de.dariah.eu/dariah-vagrant/dariah-trusty/metadata.json"
+    box.vm.box_url = "https://ci.de.dariah.eu/dariah-vagrant/dariah-trusty/metadata.json"
     box.vm.hostname = "box.cendari.local"
     box.vm.network :private_network, ip: "192.168.33.55"
     box.ssh.forward_agent = true

@@ -16,5 +16,11 @@ Run
 `librarian-puppet update`
 
 Run
- 
+
 `vagrant up`
+
+## Warning
+
+The usernames and passwords used internally default to those set in cendari's `params.pp`
+and the data from hiera respectively and are plainly visible!
+

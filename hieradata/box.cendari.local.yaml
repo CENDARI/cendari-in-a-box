@@ -1,0 +1,35 @@
+---
+cendari::atom_url: 'atomurl'
+cendari::atom_mysql_password: 'msqlpass'
+cendari::atom_ckanuser_name: 'ckanusername'
+cendari::atom_ckanuser_apikey: 'apikey'
+cendari::atom_dataspace_name: 'dataspacename'
+cendari::atom_dataspace_id: '00000000-0000-0000-0000-000000000000'
+cendari::atom_ckansync_user_email: 'syncusermail'
+cendari::atom_ckansync_user_password: 'syncuserpass'
+cendari::atom_ckansync_ckan_url: 'http://box.cendari.local/ckan'
+
+cendari::ckan_storagepath: '/data/'
+cendari::ckan_pgsqlpassword: 'pgsqlpass'
+cendari::ckan_pgsqldspassword: 'pgsqldspass'
+cendari::ckan_secret: '12345'
+cendari::ckan_app_uuid: '00000000-0000-0000-0000-000000000000'
+cendari::ckan_site_url: 'http://box.cendari.local'
+cendari::ckan_api_url: '/ckan'
+cendari::ckan_storage_url_prefix: 'http://box.cendari.local/ckan/storage/f/'
+
+cendari::virtuoso_dba_password: 'dba'
+cendari::virtuoso_dav_password: 'dav'
+
+cendari::litef_user_group: 'users'
+cendari::litef_apikey: '00000000-0000-0000-0000-000000000000'
+
+cendari::notes_pgsqlpassword: 'pgsqlpass'
+cendari::notes_secret: '12345'
+cendari::notes_adminuser_eppn: 'cendari_notes@localhost.localdomain'
+cendari::notes_adminuser_mail: 'cendari-notes@localhost.localdomain'
+cendari::notes_adminuser_key: '00000000-0000-0000-0000-000000000000'
+cendari::notes_sub_site: '/notes' 
+
+
+

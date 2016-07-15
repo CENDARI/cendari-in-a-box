@@ -29,15 +29,26 @@ FORGE
       puppetlabs-concat (>= 1.0.4)
       puppetlabs-stdlib (>= 4.2.0)
     puppetlabs-vcsrepo (1.3.1)
+    stahnma-epel (1.2.2)
+      puppetlabs-stdlib (>= 3.0.0)
+    stankevich-python (1.12.0)
+      puppetlabs-stdlib (< 6.0.0, >= 4.6.0)
+      stahnma-epel (< 2.0.0, >= 1.0.1)
+    yo61-logrotate (1.4.0)
+      puppetlabs-stdlib (< 5.0.0, >= 1.0.0)
 
 GIT
   remote: https://github.com/CENDARI/puppetmodule-cendari.git
   ref: master
-  sha: e039aed4b9973fa395b1a263172b62ddec1fd1b6
+  sha: 473707032b56e850d0209cb758e6489dff5e6b60
   specs:
     cendari-cendari (0.0.1)
+      nanliu-staging (>= 1.0.0)
+      puppetlabs-apt (>= 1.8.0)
       puppetlabs-concat (>= 1.1.1)
       puppetlabs-stdlib (>= 4.3.2)
+      stankevich-python (>= 1.7.10)
+      yo61-logrotate (>= 1.3.0)
 
 DEPENDENCIES
   cendari-cendari (>= 0)
