@@ -5,8 +5,8 @@ class profiles::backoffice {
   include '::profiles::tomcat7'
   include '::profiles::apache'
   include '::profiles::mysql'
+  include '::profiles::postgres'
   include '::profiles::elasticsearch'
-
 
   mysql::db { $::cendari::atom_mysql_db:
     user     => $::cendari::atom_mysql_user,
@@ -15,6 +15,35 @@ class profiles::backoffice {
     grant    => ['ALL'],
   }
 
+  # set up databases for ckan and datastore (ds) with appropriate rights
+  postgresql::server::db { $::cendari::ckan_pgsqldb:
+    user     => $::cendari::ckan_pgsqluser,
+    password => postgresql_password($::cendari::ckan_pgsqluser, $::cendari::ckan_pgsqlpassword),
+  }
+
+  postgresql::server::role { $::cendari::ckan_pgsqldsuser:
+    password_hash => postgresql_password($::cendari::ckan_pgsqldsuser, $::cendari::ckan_pgsqldspassword),
+  }
+
+  postgresql::server::database_grant { "${::cendari::ckan_pgsqldsuser}_${::cendari::ckan_pgsqldsdb}":
+    privilege => 'CONNECT',
+    db        => $::cendari::ckan_pgsqldsdb,
+    role      => $::cendari::ckan_pgsqldsuser,
+  }
+
+  postgresql::server::db { $::cendari::ckan_pgsqldsdb:
+    user     => $::cendari::ckan_pgsqluser,
+    password => postgresql_password($::cendari::ckan_pgsqluser, $::cendari::ckan_pgsqlpassword),
+  }
+
+
+  file {'/data':
+    ensure  => directory,
+    owner   => 'www-data',
+    group   => 'www-data',
+    mode    => '0755',
+    require => Class['::apache'],
+  }
 
   concat::fragment{'apache_backoffice':
     target  => $::profiles::apache::cendarivhost,

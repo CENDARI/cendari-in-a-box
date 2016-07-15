@@ -66,6 +66,9 @@ class profiles::apache {
   concat::fragment{'apache_default_tail':
     target  => $cendarivhost,
     content => '
+  RewriteEngine on
+  RewriteRule ^/Shibboleth.sso / [R=301,L]
+
 </VirtualHost>
      ',
     order   => '9',

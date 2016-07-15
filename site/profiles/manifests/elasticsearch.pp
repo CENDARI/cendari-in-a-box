@@ -2,6 +2,8 @@
 #
 class profiles::elasticsearch {
 
+  ensure_packages(['openjdk-7-jre-headless'])
+
   class { '::elasticsearch':
     manage_repo  => true,
     repo_version => '1.4',
