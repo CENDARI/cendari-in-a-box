@@ -4,6 +4,17 @@ class profiles::backoffice {
 
   include '::profiles::tomcat7'
   include '::profiles::apache'
+  include '::profiles::mysql'
+  include '::profiles::elasticsearch'
+
+
+  mysql::db { $::cendari::atom_mysql_db:
+    user     => $::cendari::atom_mysql_user,
+    password => $::cendari::atom_mysql_password,
+    host     => 'localhost',
+    grant    => ['ALL'],
+  }
+
 
   concat::fragment{'apache_backoffice':
     target  => $::profiles::apache::cendarivhost,

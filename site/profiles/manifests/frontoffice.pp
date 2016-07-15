@@ -3,6 +3,7 @@
 class profiles::frontoffice {
 
   include '::profiles::apache'
+  include '::profiles::elasticsearch'
 
   include '::apache::mod::headers'
   include '::apache::mod::proxy'
