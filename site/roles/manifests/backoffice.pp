@@ -2,7 +2,7 @@
 #
 class roles::backoffice {
 
-  include 'roles::backoffice_setup'
+  include '::profiles::backoffice'
 
   class { 'cendari':
     variant     => 'backoffice',

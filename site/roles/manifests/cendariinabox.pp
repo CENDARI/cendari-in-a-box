@@ -2,8 +2,8 @@
 #
 class roles::cendariinabox {
 
-  include 'roles::frontoffice_setup'
-  include 'roles::backoffice_setup'
+  include '::profiles::frontoffice'
+  include '::profiles::backoffice'
 
   class { 'cendari':
     variant     => 'cendariinabox',

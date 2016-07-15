@@ -1,8 +1,8 @@
-# role class for frontoffice_setup
+# profile class for frontoffice
 #
-class roles::frontoffice_setup {
+class profiles::frontoffice {
 
-  include 'profiles::apache'
+  include '::profiles::apache'
 
   include '::apache::mod::headers'
   include '::apache::mod::proxy'

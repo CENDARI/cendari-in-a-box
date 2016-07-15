@@ -2,7 +2,7 @@
 #
 class roles::frontoffice {
 
-  include 'roles::frontoffice_setup'
+  include '::profiles::frontoffice'
 
   class { 'cendari':
     variant     => 'frontoffice',
